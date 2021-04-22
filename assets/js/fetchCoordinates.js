@@ -2,11 +2,11 @@
 // key = d72a6d46bfeb2c72ac5251b5f7e4df77
 
 // Get the latitude and logitude:
-// http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
+// https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
 
 function getCoordinates(cityName, newCity) {
     var key = "d72a6d46bfeb2c72ac5251b5f7e4df77";
-    var locQueryUrl = "http://api.openweathermap.org/geo/1.0/direct?q=";
+    var locQueryUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
     locQueryUrl = locQueryUrl + cityName + "&limit=1&appid=" + key;
     var lat;
     var lon;

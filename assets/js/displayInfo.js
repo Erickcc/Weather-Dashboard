@@ -12,7 +12,7 @@ var imgEl = document.createElement("IMG");
 
 var today = moment();
 
-var baseImageLink = "http://openweathermap.org/img/wn/";
+var baseImageLink = "https://openweathermap.org/img/wn/";
 
 // [0] = icon
 // [1] = temperature
