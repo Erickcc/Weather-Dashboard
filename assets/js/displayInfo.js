@@ -1,5 +1,6 @@
 var mainCardEl = document.querySelector('#main-card');
 var secondaryCardEl = document.querySelector('#secondary-card')
+var historyCardEl = document.querySelector('#search-history')
 
 var h1El = document.createElement("H1");
 var liEl = document.createElement("LI");
@@ -25,7 +26,34 @@ var baseImageLink = "https://openweathermap.org/img/wn/";
 function renderInformation(weatherData, cityName, newCity){
     var dateVariable = today;
     var currentImageLink;
+    var cityBrowser;
+    var cityPresent;
 
+    //LHS
+    for(var i = 0; historyCardEl.childNodes[i]; i++){
+        cityBrowser=historyCardEl.childNodes[i].textContent;
+        cityBrowser = cityBrowser.trim();
+        cityBrowser = toTitleCase(cityBrowser);
+        console.log("City browser: " + cityBrowser);
+        console.log(i);
+        if (cityBrowser == cityName){
+            console.log("City already present");
+            cityPresent = true;   
+        }
+    }
+    if (cityPresent){
+        cityPresent=false;
+    }else{
+        cardEl = document.createElement("DIV");
+        liTextEl = document.createTextNode(cityName);
+        cardEl.appendChild(liTextEl); 
+        cardEl.classList.add("alert", "alert-dark");
+        cardEl.setAttribute("role", "alert");
+        historyCardEl.appendChild(cardEl);
+    }
+
+
+    //RHS
     while (mainCardEl.firstChild) {
         mainCardEl.removeChild(mainCardEl.lastChild);
     }

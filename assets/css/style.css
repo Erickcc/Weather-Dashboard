@@ -88,7 +88,7 @@ h2{
 }
 
 #search-history>*:hover{
-    cursor: grab;
+    cursor: pointer;
 }
 
 .uv-index-low{
