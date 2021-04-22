@@ -109,3 +109,10 @@ h2{
     text-align: center;
     width: 50px;
 }
+
+@media screen and (max-width: 992px) {
+    :root{
+        --lhs-width: 95%;
+        --rhs-width: 95%;
+    }
+  }

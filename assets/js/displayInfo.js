@@ -113,7 +113,7 @@ function renderInformation(weatherData, cityName, newCity){
         }
         ulEl.classList.add("secondary-card-ul");
         cardEl.appendChild(ulEl);
-        cardEl.classList.add("secondary-card" , "col-2");
+        cardEl.classList.add("secondary-card" , "col-lg-2", "col-md-12");
         // secondaryCardEl.appendChild(cardEl);
         rowEl.appendChild(cardEl);
         rowEl.classList.add("row", "justify-content-between");
