@@ -1,0 +1,87 @@
+:root{
+    --lhs-width: 20%;
+    --rhs-width: 78%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header{
+    display: block;
+    background-color: teal;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    padding: 10px 0 15px 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+.lhs{
+    width: var(--lhs-width);
+    display: inline-block;
+    background-color: whitesmoke;
+    margin: 10px 0 0 10px;
+    
+}
+
+.search-history{
+    border-top: 2px solid gray;
+    padding-top: 10px;
+}
+
+.rhs{
+    width: var(--rhs-width);
+    display: inline-block;
+    background-color: whitesmoke;
+    margin: 10px 0 0 10px;
+}
+
+.rhs ul{
+    list-style: none;
+}
+
+.weather-section{
+    margin: 10px 0 25px 0;
+    border: 1px solid black;
+    padding: 10px 5px;
+    
+}
+
+.card-section{
+    margin: 50px 0 0 0;
+}
+
+.custom-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.secondary-card{
+    display: inline-block;
+    /* margin-left: 30px;
+    margin-right: 30px; */
+    background-color:  lightslategray;
+    color: black;
+    border-radius: 5px;
+    /* padding: 10px */
+}
+
+.secondary-card-ul{
+    list-style: none;
+}
+
+.list-items{
+    padding: 10px;
+}
+
+h2{
+    padding-left: 5px;
+}
