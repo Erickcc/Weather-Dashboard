@@ -47,4 +47,4 @@ For further information, please read the comments on each file, in order to test
 &nbsp;
 
 ## Deployed webpage:
-* https://erickcc.github.io/HW5-Third-Party-APIs/
+* https://erickcc.github.io/Weather-Dashboard/
