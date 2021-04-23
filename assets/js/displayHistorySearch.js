@@ -11,8 +11,9 @@ function displayHistorySearch(){
         historyCardEl.removeChild(historyCardEl.lastChild);
     }
     for (var i=0; i <storedNames.length; i++){
-        if(localStorage.getItem(storedNames[i]) != "undefined"){
-            // console.log(storedData);
+        if(localStorage.getItem(storedNames[i]) != "undefined" && localStorage.getItem(storedNames[i]) != "null"
+        && localStorage.getItem(storedNames[i]) != null){
+            
             storedData = localStorage.getItem(storedNames[i]);
             cardEl = document.createElement("DIV");
             liTextEl = document.createTextNode(storedData);
