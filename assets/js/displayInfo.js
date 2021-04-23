@@ -1,6 +1,6 @@
 var mainCardEl = document.querySelector('#main-card');
-var secondaryCardEl = document.querySelector('#secondary-card')
-var historyCardEl = document.querySelector('#search-history')
+var secondaryCardEl = document.querySelector('#secondary-card');
+var historyCardEl = document.querySelector('#search-history');
 
 var h1El = document.createElement("H1");
 var liEl = document.createElement("LI");
@@ -34,8 +34,8 @@ function renderInformation(weatherData, cityName, newCity){
         cityBrowser=historyCardEl.childNodes[i].textContent;
         cityBrowser = cityBrowser.trim();
         cityBrowser = toTitleCase(cityBrowser);
-        console.log("City browser: " + cityBrowser);
-        console.log(i);
+        // console.log("City browser: " + cityBrowser);
+        // console.log(i);
         if (cityBrowser == cityName){
             console.log("City already present");
             cityPresent = true;   
@@ -43,14 +43,12 @@ function renderInformation(weatherData, cityName, newCity){
     }
     if (cityPresent){
         cityPresent=false;
+        storeValue(cityName, true);
     }else{
-        cardEl = document.createElement("DIV");
-        liTextEl = document.createTextNode(cityName);
-        cardEl.appendChild(liTextEl); 
-        cardEl.classList.add("alert", "alert-dark");
-        cardEl.setAttribute("role", "alert");
-        historyCardEl.appendChild(cardEl);
+        storeValue(cityName, false);
     }
+
+    displayHistorySearch();
 
 
     //RHS
@@ -148,7 +146,7 @@ function renderInformation(weatherData, cityName, newCity){
     }
     secondaryCardEl.appendChild(rowEl);
 
-    console.log("City Name: " + cityName);
-    console.log("New city: " + newCity);
+    // console.log("City Name: " + cityName);
+    // console.log("New city: " + newCity);
 }
 

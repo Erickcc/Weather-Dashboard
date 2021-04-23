@@ -19,7 +19,7 @@ function getWeather(lat, lon, cityName, newCity) {
             return response.json();
         })
         .then(function (locRes) {
-            console.log(locRes);
+            // console.log(locRes);
             weatherData = createArray(weatherData);
             weatherData = getUsefulData(locRes, weatherData);
             renderInformation(weatherData, cityName, newCity);
@@ -28,7 +28,7 @@ function getWeather(lat, lon, cityName, newCity) {
             console.error(error);
         });
 
-    console.log(locQueryUrl);
+    // console.log(locQueryUrl);
 }
 
 function getUsefulData(locRes, weatherData) {

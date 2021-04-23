@@ -36,7 +36,7 @@ function toTitleCase(str) {
   });
 }
 
+displayHistorySearch();
 searchHistoryEl.addEventListener('click', historyElements);
-
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 searchBtnEl.addEventListener('click', handleSearchFormSubmit);
