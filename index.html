@@ -5,43 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Add bootstrap library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
-
-    <script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-      ></script>
-
+    <!-- Add momentjs library -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <!-- Add our own style sheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-
-
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 
 <body>
+    <!-- Simple header that gets style on the CSS file -->
     <header class="header">
         <div>Weather Dashboard</div>
     </header>
+    <!-- Left hand side of the page (Around 20% of the screen) -->
     <section class="lhs">
+        <!-- Input box with a label, input area and a button -->
         <form id="search-form" class="form-group col-12">
             <label for="search-form">Search for a city:</label>
             <input type="text" class="form-control" id="search-input" placeholder="Enter a city">
             <button type="button" class="btn btn-primary w-100 custom-btn" id="search-btn">Primary</button>
         </form>
-
-        <div class="form-group col-12 search-history" id="search-history">
-        </div>
+        <!-- Past inquires section, displays previous searched cities, content gets added in the js file -->
+        <div class="form-group col-12 search-history" id="search-history"></div>
     </section>
 
+    <!-- Right hand side of the page (Around 78% of the screen) -->
     <section class="rhs">
+        <!-- We define 1 row that we are going to populate with today's weather information -->
         <row>
+            <!-- create a container that has an unordered list, each list item of this unordered list carries -->
+            <!-- an element of today's weather information -->
             <div class="weather-section col-12">
                 <ul class="main-card" id="main-card"></ul>
             </div>
         </row>
         <row>
+            <!-- Create a container that will later hold all the cards that display the information for the next 5 days -->
             <div class="card-section container col-12" id="secondary-card">
                 <div class="row">
                     <h2>5-Day Forecast:</h2>
@@ -51,20 +53,27 @@
     </section>
 
 
-
+    <!-- Add jquery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
+    <!-- Add bootstrap jquery bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
-    <!-- <script src="./assets/js/matrixTest.js"></script> -->
+    <!-- Add all our scripts -->
+    <!-- Script that is used to display the labels with the previous entered -->
     <script src="./assets/js/displayHistorySearch.js"></script>
+    <!-- Script that listens to buttons and labels clicks and call for subsecuent functions -->
     <script src="./assets/js/script.js"></script>
+    <!-- Script that uses an API to fetch the latitude and longitude of a city taking the city name as an input -->
     <script src="./assets/js/fetchCoordinates.js"></script>
+    <!-- Script that feeds an API with a latitude and longitude to get all the data of a todays and the next 5 days -->
     <script src="./assets/js/fetchWeather.js"></script>
+    <!-- Script that displays all the information of the RHS of the screen, all the weather information -->
     <script src="./assets/js/displayInfo.js"></script>
+    <!-- Script that saves all the previous browsed cities in a local storage variable -->
     <script src="./assets/js/storeValues.js"></script>
     <!-- <script src="./assets/js/test.js"></script> -->
 

@@ -1,3 +1,5 @@
+// Tests js, not actually implemented in the final code.
+
 var today = moment();
 //moment().subtract(10, 'days').calendar()
 var asd = today.format("MM-DD-YYYY");
